@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encoder</title>
+    <style>
+        input, label, button {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <label for="input">
+        Enter your js script here
+    </label>
+    <textarea id="input" name="input"></textarea>
+    <button id="encode" name="encode" type="button">
+        Encode
+    </button>
+</body>
+<script>
+
+    function encode(a) {
+        if (a.length) {
+            let c = a.length;
+            let e = Math.ceil(Math.sqrt(c / 3));
+            let f = e;
+            let g = document.createElement("canvas");
+            let h = g.getContext("2d");
+            g.width = e;
+            g.height = f;
+            let j = h.getImageData(0, 0, e, f),
+                k = j.data,
+                l = 0;
+            for (let m = 0; m < f; m++)
+                for (let n = 0; n < e; n++) {
+                    let o = 4 * (m * e) + 4 * n;
+                    let p = a[l++];
+                    let q = a[l++];
+                    let r = a[l++];
+                    (p || q || r) && (p && (k[o] = ord(p)), q && (k[o + 1] = ord(q)), r && (k[o + 2] = ord(r)), k[o + 3] = 255)
+                }
+            return h.putImageData(j, 0, 0), h.canvas.toDataURL()
+        }
+    }
+
+    let ord = function ord(a) {
+        let c = a + "";
+        let e = c.charCodeAt(0);
+        if (55296 <= e && 56319 >= e) {
+            if (1 === c.length) return e;
+            let f = c.charCodeAt(1);
+            return 1024 * (e - 55296) + (f - 56320) + 65536;
+        }
+        return 56320 <= e && 57343 >= e ? e : e;
+    }
+
+    document.getElementById("encode").onclick = function(){
+
+        let img = new Image;
+        let stringenc = document.getElementById("input").value;
+        img.src = encode(stringenc);
+        document.body.innerHTML = "";
+        document.body.appendChild(img);
+
+    }
+
+</script>
+</html>
