@@ -1,14 +1,2 @@
 nothing received :(
-nothing received :(
-nothing received :(
-nothing received :(
-</p><input type='text' name='token' value='random_nounce_to_keep_secret' hidden><input type=
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
-nothing received :(
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
-                </p>                                <input type='text' name='token' value='random_nounce_to_keep_secret' hidden>                <input type=
+</p>        </div>        </div>    <div>        <form action='.?route=dangling_insert' method='POST'>            <p>                <label for='comment'>Votre commentaire :</label>                <input type='text' id='comment' name='comment'>            </p>            <input type='text' name='_token' value='keep_that_nounce_secret' hidden>            <input type=

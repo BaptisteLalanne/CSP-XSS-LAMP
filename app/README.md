@@ -40,13 +40,14 @@ Les méthodes utilisables par tous les models PHP se trouvent dans le fichier `M
 - `all`: récupère toutes les données de la table,
 - `load`: récupère une ligne de la table selon son identifiant (clef primaire),
 - `insert` : insère une ligne dans la table,
-- `random` : récupère une ligne aléatoire de la table.
+- `random` : récupère une ligne aléatoire de la table,
+- `clear` : supprime toutes les données de la table.
 
 ### Dossier view
 
 Les vues sont les interfaces de notre application. Ce sont principalement des fragments de pages HTML ou PHP.
 
-### Dossier CSP
+### Dossier csp
 
 Dans ce dossier, nous stockons les entêtes CSP dont nous avons besoin pour l'exploitation de nos failles. Ces entêtes sont codées en PHP.
 
@@ -55,3 +56,11 @@ Dans ce dossier, nous stockons les entêtes CSP dont nous avons besoin pour l'ex
 Ici, nous retrouvons nos différents controllers. Chaque controller est une classe PHP qui doit étendre la classe `App.php`. Généralement, une méthode d'un controller récupère des données venant des models ou de la requête (paramères GET, POST, REQUEST, SERVER...), puis renvoie plusieurs fragments de vues à l'aide de la fonction `include_once`.
 
 Pour assurer le bon fonctionnement de chaque page, il est demandé d'inclure la politique de sécurité (CSP) voulue en premier, puis le header (`header.php`). Enfin, le dernier include doit être le footer (`footer.php`). 
+
+### Dossier css
+
+Tous est dans le nom du dossier.
+
+### Dossier database
+
+Ce dossier sert simplement de stockage pour nos scripts SQL qui permettent de construire la base de données de l'application.

@@ -33,13 +33,4 @@ class HomeController {
 		include_once "view/footer.php";
 	}
 
-	public function dangling() {
-		$data = Commentaire::all();
-		include_once "csp/default.php";
-		include_once "view/header.php";
-		include_once "view/not_implemented.php";
-		include_once "view/show_commentaires.php";
-		include_once "view/footer.php";
-	}
-
 }

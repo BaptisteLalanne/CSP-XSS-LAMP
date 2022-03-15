@@ -66,7 +66,16 @@ class Model {
 		$sql = "
 			INSERT INTO $table ($keys) VALUES ('$values')
 		";
-		echo "$sql";
+		$st = db()->prepare($sql);
+		$st->execute();
+	}
+
+	public static function clear() {
+		$class = get_called_class();
+		$table =  strtolower($class);
+		$sql = "
+			DELETE FROM $table
+		";
 		$st = db()->prepare($sql);
 		$st->execute();
 	}
