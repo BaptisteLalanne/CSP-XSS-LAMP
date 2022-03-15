@@ -10,7 +10,6 @@ class Commentaire extends Model {
 	"idcommentaire"
 	"pseudo"
 	"commentaire"
-
 	*/
 
 }
