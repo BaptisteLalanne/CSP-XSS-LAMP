@@ -27,9 +27,9 @@ class HomeController {
 	}
 
 	public function image() {
-		include_once "csp/default.php";
+		include_once "csp/image.php";
 		include_once "view/header.php";
-		include_once "view/not_implemented.php";
+		include_once "view/image.php";
 		include_once "view/footer.php";
 	}
 
