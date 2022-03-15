@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mon site</title>
+	<title>SERE - H4211 - CSP Bypass</title>
 	<meta charset="utf-8">
 
 	<!-- CSS -->
