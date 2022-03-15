@@ -2,11 +2,14 @@
 
 class Commentaire extends Model {
 
-	/* Dans la bdd :
+	/* 
+	Dans la bdd :
+	Table "commentaire"
 
-	idcommentaire
-	pseudo
-	commentaire
+	Attributs :
+	"idcommentaire"
+	"pseudo"
+	"commentaire"
 
 	*/
 

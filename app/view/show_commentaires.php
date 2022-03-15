@@ -1,7 +1,6 @@
 <main>
 	
-	<div align="center">
-		<h1>WELCOME</h1>
+	<div">
 		<div>
 			<?php foreach ($data as $c) { ?>
 
