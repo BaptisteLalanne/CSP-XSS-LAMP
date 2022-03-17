@@ -20,7 +20,7 @@ Pour fonctionner correctement, l'application doit être déployé sur un serveur
 
 [Tuto LAMP](https://www.javatpoint.com/how-to-install-lamp-in-ubuntu)
 
-Sur linux, la suite LAMP permet d'installer tous les composants d'un serveur web standard (PHP, Apache, MySQL...)
+Sur linux, la suite LAMP permet d'installer tous les composants d'un serveur web standard (PHP, Apache, MySQL...). Pour assurer le bon fonctionnement de l'application, veuillez utiliser la version 7.x de PHP (7.4 par exemple).
 
 Les fichiers de l'application sont à déposer dans le dossier `/var/www/html` pour être accessible depuis un navigateur web. Depuis le navigateur, il faut simplement accéder au fichier `index.php`, qui se trouve à la racine de cette application.
 
@@ -30,12 +30,14 @@ Une fois les fichiers de l'application déposés, il est nécessaire dé créer 
 
 Les identifiants de votre base de données doivent ensuite être renseignées dans le fichier `config.php`, qui est détaillé plus tard dans ce document.
 
+Une fois la base de données créée, vous pouvez y importer les différents scripts présents dans le dossier `database`, via l'interface de PHPMyAdmin.
+
 
 ### Windows
 
 [Tuto WAMP](https://www.c-sharpcorner.com/article/how-to-install-wamp-server-in-windows-10/)
 
-Sur Windows, le logiciel WAMP permet d'installer tout ce qui est nécessaire : serveur web, MySQL, PHPMyAdmin...
+Sur Windows, le logiciel WAMP permet d'installer tout ce qui est nécessaire : serveur web, MySQL, PHPMyAdmin... Pour assurer le bon fonctionnement de l'application, veuillez utiliser la version 7.x de PHP (7.4 par exemple).
 
 Une fois le logiciel installé, les fichiers de l'application peuvent être déposé dans le dossier `C:\wamp64\wwww`.
 
@@ -44,6 +46,8 @@ Exemple : si la racine de cette application se trouve dans `C:\wamp64\www\SERE\a
 Une fois les fichiers de l'application déposés, il est nécessaire dé créer une base de données. Pour cela, vous pouvez utiliser l'outil PHPMyAdmin, accessible depuis un navigateur à l'adresse `http://localhost/phpmyadmin`. Par défaut, l'utilisateur est `root` et n'a pas de mot de passe.
 
 Les identifiants de votre base de données doivent ensuite être renseignées dans le fichier `config.php`, qui est détaillé plus tard dans ce document.
+
+Une fois la base de données créée, vous pouvez y importer les différents scripts présents dans le dossier `database`, via l'interface de PHPMyAdmin.
 
 ## Structure
 
