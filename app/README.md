@@ -12,6 +12,39 @@ Pour naviguer d'une page à l'autre, l'application utilise le paramètre GET `ro
 
 Le fonctionnement des routes est décrit plus en détails dans la suite de ce document.
 
+## Installation
+
+Pour fonctionner correctement, l'application doit être déployé sur un serveur web.
+
+### Linux
+
+[Tuto LAMP](https://www.linux.com/training-tutorials/easy-lamp-server-installation/)
+
+Sur linux, la suite LAMP permet d'installer tous les composants d'un serveur web standard (PHP, Apache, MySQL...)
+
+Les fichiers de l'application sont à déposer dans le dossier `/var/www/html` pour être accessible depuis un navigateur web. Depuis le navigateur, il faut simplement accéder au fichier `index.php`, qui se trouve à la racine de cette application.
+
+Exemple : si la racine de cette application se trouve dans `/var/www/html/SERE/app`, on peut y accéder à l'adresse `http://localhost/SERE/app`, ou `http://localhost/SERE/app/index.php` (il n'est pas nécessaire de spécifier le nom du fichier `index` dans l'URL, c'est optionnel sur les serveurs web).
+
+Une fois les fichiers de l'application déposés, il est nécessaire dé créer une base de données. Pour cela, vous pouvez utiliser l'outil PHPMyAdmin ([Tuto PHPMyAdmin](https://www.linuxshelltips.com/install-phpmyadmin-in-linux/)), accessible depuis un navigateur à l'adresse `http://localhost/phpmyadmin`. Par défaut, l'utilisateur est `root` et n'a pas de mot de passe.
+
+Les identifiants de votre base de données doivent ensuite être renseignées dans le fichier `config.php`, qui est détaillé plus tard dans ce document.
+
+
+### Windows
+
+[Tuto WAMP](https://www.c-sharpcorner.com/article/how-to-install-wamp-server-in-windows-10/)
+
+Sur Windows, le logiciel WAMP permet d'installer tout ce qui est nécessaire : serveur web, MySQL, PHPMyAdmin...
+
+Une fois le logiciel installé, les fichiers de l'application peuvent être déposé dans le dossier `C:\wamp64\wwww`.
+
+Exemple : si la racine de cette application se trouve dans `C:\wamp64\www\SERE\app`, on peut y accéder à l'adresse `http://localhost/SERE/app`, ou `http://localhost/SERE/app/index.php` (il n'est pas nécessaire de spécifier le nom du fichier `index` dans l'URL, c'est optionnel sur les serveurs web).
+
+Une fois les fichiers de l'application déposés, il est nécessaire dé créer une base de données. Pour cela, vous pouvez utiliser l'outil PHPMyAdmin, accessible depuis un navigateur à l'adresse `http://localhost/phpmyadmin`. Par défaut, l'utilisateur est `root` et n'a pas de mot de passe.
+
+Les identifiants de votre base de données doivent ensuite être renseignées dans le fichier `config.php`, qui est détaillé plus tard dans ce document.
+
 ## Structure
 
 ### Racine du projet
