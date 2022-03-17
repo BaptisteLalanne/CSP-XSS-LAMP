@@ -18,7 +18,7 @@ Pour fonctionner correctement, l'application doit être déployé sur un serveur
 
 ### Linux
 
-[Tuto LAMP](https://www.linux.com/training-tutorials/easy-lamp-server-installation/)
+[Tuto LAMP](https://www.javatpoint.com/how-to-install-lamp-in-ubuntu)
 
 Sur linux, la suite LAMP permet d'installer tous les composants d'un serveur web standard (PHP, Apache, MySQL...)
 
