@@ -5,7 +5,11 @@ $app = new App();
 // mes routes
 $app->route("home", "HomeController", "index");
 $app->route("jsonp", "HomeController", "jsonp");
-$app->route("image", "HomeController", "image");
+
+// image routes
+$app->route("image_home", "ImageController", "index");
+$app->route("image_insert", "ImageController", "insert");
+$app->route("image_clear", "ImageController", "clear");
 
 // dangling markup routes
 $app->route("dangling_home", "DanglingMarkupController", "index");

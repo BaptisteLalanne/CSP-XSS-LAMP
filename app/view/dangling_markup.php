@@ -1,6 +1,6 @@
 <main>
     <div id="dw_clear">
-        <a href=".?route=dangling_clear">Nettoyer</a>
+        <a class="blackButton" href=".?route=dangling_clear">Nettoyer</a>
     </div>
     <div id="dw_comments">
         <?php foreach ($data as $c) { ?>

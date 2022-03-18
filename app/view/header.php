@@ -7,6 +7,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/dangling_markup.css">
+	<link rel="stylesheet" type="text/css" href="css/image.css">
 
 </head>
 <body>
@@ -19,7 +20,7 @@
 		<nav>
 			<ul id="main-menu">
 				<li><a href="?route=jsonp">JSONP</a></li>
-				<li><a href="?route=image">Image</a></li>
+				<li><a href="?route=image_home">Image</a></li>
 				<li><a href="?route=dangling_home">Dangling Markup</a></li>
 			</ul>
 		</nav>
