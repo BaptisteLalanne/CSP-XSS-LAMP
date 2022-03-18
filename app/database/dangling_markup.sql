@@ -14,7 +14,3 @@ CREATE TABLE user (
     secret_key VARCHAR(255)
 );
 
-CREATE TABLE i (
-    idi INT AUTO_INCREMENT PRIMARY KEY,
-    src VARCHAR(1024)
-);
