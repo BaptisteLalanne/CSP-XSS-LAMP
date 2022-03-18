@@ -60,6 +60,10 @@ main {
 	padding: 50px 100px;
 }
 
+main > h2 {
+	margin-bottom: 40px;
+}
+
 .message {
 	margin-top: 10px;
 }

@@ -5,7 +5,7 @@ $data = null;
 class HomeController {
 
 	public function index() {
-		$data = Commentaire::all();
+		//$data = Commentaire::all();
 		include_once "csp/default.php";
 		include_once "view/header.php";
 		include_once "view/welcome.php";
