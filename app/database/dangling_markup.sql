@@ -6,6 +6,14 @@ CREATE TABLE dm (
     comment VARCHAR(255)
 );
 
+CREATE TABLE user (
+    iduser INT AUTO_INCREMENT PRIMARY KEY,
+    pseudo VARCHAR(255),
+    mail VARCHAR(255),
+    password VARCHAR(255),
+    secret_key VARCHAR(255)
+);
+
 CREATE TABLE i (
     idi INT AUTO_INCREMENT PRIMARY KEY,
     src VARCHAR(1024)

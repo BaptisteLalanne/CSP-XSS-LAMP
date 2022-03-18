@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encoder</title>
+    <style>
+        input, label, button, textarea {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    Copier le fichier de l'image depuis l'explorateur de fichier, puis collez le dans cette fenêtre.
+    <button id="decoder">Décoder</button>
+    <canvas id="mycanvas"></canvas>
+</body>
+<script>
+
+    //https://stackoverflow.com/questions/50427513/html-paste-clipboard-image-to-file-input
+    function retrieveImageFromClipboardAsBlob(pasteEvent, callback){
+        if(pasteEvent.clipboardData == false){
+            if(typeof(callback) == "function"){
+                callback(undefined);
+            }
+        };
+
+        var items = pasteEvent.clipboardData.items;
+
+        if(items == undefined){
+            if(typeof(callback) == "function"){
+                callback(undefined);
+            }
+        };
+
+        for (var i = 0; i < items.length; i++) {
+            // Skip content if not image
+            if (items[i].type.indexOf("image") == -1) continue;
+            // Retrieve image on clipboard as blob
+            var blob = items[i].getAsFile();
+
+            if(typeof(callback) == "function"){
+                callback(blob);
+            }
+        }
+    }
+
+    window.addEventListener("paste", function(e){
+
+        // Handle the event
+        retrieveImageFromClipboardAsBlob(e, function(imageBlob){
+            // If there's an image, display it in the canvas
+            if(imageBlob){
+                var canvas = document.getElementById("mycanvas");
+                var ctx = canvas.getContext('2d');
+                
+                // Create an image to render the blob on the canvas
+                var img = new Image();
+
+                // Once the image loads, render the img on the canvas
+                img.onload = function(){
+                    // Update dimensions of the canvas with the dimensions of the image
+                    canvas.width = this.width;
+                    canvas.height = this.height;
+
+                    // Draw the image
+                    ctx.drawImage(img, 0, 0);
+                };
+
+                // Crossbrowser support for URL
+                var URLObj = window.URL || window.webkitURL;
+
+                // Creates a DOMString containing a URL representing the object given in the parameter
+                // namely the original Blob
+                img.src = URLObj.createObjectURL(imageBlob);
+            }
+        });
+    }, false);
+
+    document.getElementById("decoder").onclick = function() {
+        //https://www.secjuice.com/hiding-javascript-in-png-csp-bypass/
+        t = document.getElementById("mycanvas");
+        
+        var s = String.fromCharCode, c = document.createElement("canvas");
+        var cs = c.style,
+            cx = c.getContext("2d"),
+            w = t.offsetWidth,
+            h = t.offsetHeight;
+        c.width = w;
+        c.height = h;
+        cs.width = w + "px";
+        cs.height = h + "px";
+        cx.drawImage(t, 0, 0);
+        var x = cx.getImageData(0, 0, w, h).data;
+        var a = "",
+            l = x.length,
+            p = -1;
+        for (var i = 0; i < l; i += 4) {
+            if (x[i + 0]) a += s(x[i + 0]);
+            if (x[i + 1]) a += s(x[i + 1]);
+            if (x[i + 2]) a += s(x[i + 2]);
+        }
+        document.getElementsByTagName("body")[0].innerHTML=a;
+
+    }
+
+
+</script>
+</html>
