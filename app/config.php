@@ -13,8 +13,8 @@ $_db_schema = "public";
 
 // put your credentials here
 $_db_name = "sere";
-$_db_login = "tomperr";
-$_db_pass = "tomperr";
+$_db_login = "root";
+$_db_pass = "root";
 
 $db = new PDO("mysql:host=$_db_host;dbname=$_db_name;port=$_db_port", $_db_login, $_db_pass);
 $db->query("SET search_path TO $_db_schema;");
