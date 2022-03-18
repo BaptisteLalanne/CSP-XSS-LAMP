@@ -57,7 +57,7 @@ ul#main-menu a {
 
 main {
 	flex: 1 1 auto;
-	padding: 50px 100px;
+	padding: 25px 50px;
 }
 
 main > h2 {
@@ -67,6 +67,14 @@ main > h2 {
 .message {
 	margin-top: 10px;
 }
+
+.blackButton {
+	color: white;
+    background-color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
 
 /* FOOTER */
 

@@ -3,7 +3,7 @@
     <h2>Messagerie</h2>
 
     <div id="dw_clear">
-        <a href=".?route=dangling_clear">Supprimer l'historique</a>
+        <a class="blackButton" href=".?route=dangling_clear">Supprimer l'historique</a>
     </div>
     <div id="dw_comments">
         <?php foreach ($data as $c) { ?>

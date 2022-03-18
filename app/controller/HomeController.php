@@ -26,11 +26,4 @@ class HomeController {
 		include_once "view/footer.php";
 	}
 
-	public function image() {
-		include_once "csp/image.php";
-		include_once "view/header.php";
-		include_once "view/image.php";
-		include_once "view/footer.php";
-	}
-
 }
