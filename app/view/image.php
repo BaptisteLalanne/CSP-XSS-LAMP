@@ -5,7 +5,8 @@
 		<h3>Construisez votre propre album à partir de vos images Imgur préférées !</h3>
 		<div>
 			<form action='.?route=image_insert' method='POST'>
-				<label for='imageSrc'>URL Imgur :</label> <input type='text' id='imageSrc' name='imageSrc'>
+				<label for='imageSrc'>URL Imgur :</label> 
+				<input type='url' id='imageSrc' name='imageSrc'>
 				<input type="submit" id="imageSubmitButton" value="Ajouter">
 			</form>
 		</div>
@@ -17,7 +18,7 @@
 		<div id="img_album_container">
 			<?php foreach ($imageData as $i) { ?>
 				<div class="image">
-					<img src="<?= $i->src ?>">
+					<img src="<?php echo $i->src ?>">
 				</div>
 			<?php } ?>
 		</div>
