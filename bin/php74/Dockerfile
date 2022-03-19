@@ -52,6 +52,7 @@ RUN apt-get update && \
 # Other PHP7 Extensions
 
 RUN docker-php-ext-install pdo_mysql && \
+    docker-php-ext-install pdo pdo_mysql && \
     docker-php-ext-install pdo_sqlite && \
     docker-php-ext-install mysqli && \
     docker-php-ext-install curl && \
