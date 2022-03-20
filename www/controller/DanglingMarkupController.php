@@ -55,7 +55,6 @@ class DanglingMarkupController {
                 "password" => $_POST['password'],
                 "secret_key" => $secret_key
             ];
-            print_r($data);
             User::insert($data);
 
         }
@@ -63,7 +62,7 @@ class DanglingMarkupController {
         include_once "csp/dangling_markup.php";
 		include_once "view/header.php";
         include_once "view/dangling_menu.php";
-		include_once "view/dangling_register.php";
+		include_once "view/register.php";
 		include_once "view/footer.php";
     }
 

@@ -9,7 +9,7 @@
         } else {
         ?>
         <li><a href=".?route=disconnect">Deconnexion</a></li>
-        <li><a href=".?route=dangling_home">Messagerie</a></li>
+        <li><a href=".?route=jsonp_home">Messagerie</a></li>
         <?php
         }
         ?>

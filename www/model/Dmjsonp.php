@@ -4,7 +4,7 @@ class Dmjsonp extends Model {
 
 	/* 
 	Dans la bdd :
-	Table "dm"
+	Table "dmjsonp"
 
 	Attributs :
 	"iddm"

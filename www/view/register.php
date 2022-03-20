@@ -2,7 +2,7 @@
 
     <h2>Inscription</h2>
 
-    <form action=".?route=dangling_register" method="POST">
+    <form action=".?route=register" method="POST">
         <p>
             <label for="pseudo">Pseudo</label>
             <input type="text" id="pseudo" name="pseudo">

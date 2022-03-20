@@ -68,7 +68,6 @@ class Model {
 		";
 		$st = db()->prepare($sql);
 		$st->execute();
-		print_r($st->errorInfo());	
 	}
 
 	public static function clear() {

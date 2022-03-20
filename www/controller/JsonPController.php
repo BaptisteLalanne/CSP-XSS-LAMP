@@ -2,17 +2,17 @@
 
 $data = null;
 
-class DanglingMarkupController {
+class JsonPController {
 
 	public function index() {
 
         if (isset($_SESSION['pseudo'])) {
             // user is connected
             $data = Dmjsonp::all();
-            include_once "csp/dangling_markup.php";
+            include_once "csp/jsonp.php";
             include_once "view/header.php";
-            include_once "view/dangling_menu.php";
-            include_once "view/dangling_markup.php";
+            include_once "view/jsonp_menu.php";
+            include_once "view/jsonp_comment.php";
             include_once "view/footer.php";
         } else {
             // user is not connected
@@ -62,8 +62,8 @@ class DanglingMarkupController {
 
         include_once "csp/jsonp.php";
 		include_once "view/header.php";
-        include_once "view/dangling_menu.php";
-		include_once "view/dangling_register.php";
+        include_once "view/jsonp_menu.php";
+		include_once "view/register.php";
 		include_once "view/footer.php";
     }
 
@@ -90,10 +90,10 @@ class DanglingMarkupController {
         if (isset($_SESSION['pseudo'])) {
             $this->index();
         } else {
-            include_once "csp/dangling_markup.php";
+            include_once "csp/jsonp.php";
             include_once "view/header.php";
-            include_once "view/dangling_menu.php";
-            include_once "view/dangling_login.php";
+            include_once "view/jsonp_menu.php";
+            include_once "view/jsonp_login.php";
             include_once "view/footer.php";
         }
     }

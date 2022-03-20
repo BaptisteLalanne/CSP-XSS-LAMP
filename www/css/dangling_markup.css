@@ -9,16 +9,16 @@
     text-decoration: none;
 }
 
-#dangling_menu {
+#menu {
     padding: 50px 50px 10px 50px;
 }
 
-#dangling_menu li {
+#menu li {
     display: inline-block;
     margin-right: 20px;
 }
 
-#dangling_menu a {
+#menu a {
     padding: 5px 10px;
     color: white;
     background-color: black;
