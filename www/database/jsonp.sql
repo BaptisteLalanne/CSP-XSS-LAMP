@@ -1,4 +1,4 @@
 CREATE TABLE dmjsonp (
     iddm INT AUTO_INCREMENT PRIMARY KEY,
-    comment VARCHAR(255)
+    comment VARCHAR(1024)
 );
