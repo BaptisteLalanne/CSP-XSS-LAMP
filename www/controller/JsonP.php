@@ -8,7 +8,7 @@ class DanglingMarkupController {
 
         if (isset($_SESSION['pseudo'])) {
             // user is connected
-            $data = Dm::all();
+            $data = Dmjsonp::all();
             include_once "csp/dangling_markup.php";
             include_once "view/header.php";
             include_once "view/dangling_menu.php";
@@ -21,7 +21,7 @@ class DanglingMarkupController {
 	}
 
     public function clear() {
-        Dm::clear();
+        Dmjsonp::clear();
         $this->index();
     }
 
@@ -31,7 +31,7 @@ class DanglingMarkupController {
             $inserted = [
                 "comment" => $_POST['comment']
             ];
-            Dm::insert($inserted);
+            Dmjsonp::insert($inserted);
         }
         $this->index();
     }
@@ -42,6 +42,7 @@ class DanglingMarkupController {
         // check form submission
         if (isset($_POST['pseudo'])) {
             // form has been submited
+
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $secret_key = "";
             for ($i = 0; $i < 30; $i++) {
@@ -55,12 +56,11 @@ class DanglingMarkupController {
                 "password" => $_POST['password'],
                 "secret_key" => $secret_key
             ];
-            print_r($data);
             User::insert($data);
 
         }
 
-        include_once "csp/dangling_markup.php";
+        include_once "csp/jsonp.php";
 		include_once "view/header.php";
         include_once "view/dangling_menu.php";
 		include_once "view/dangling_register.php";

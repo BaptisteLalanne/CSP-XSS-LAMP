@@ -64,10 +64,11 @@ class Model {
 		$keys = implode(", ", array_keys($data));
 		$values = implode("', '", array_values($data));
 		$sql = "
-			INSERT INTO $table ($keys) VALUES ('$values')
+		INSERT INTO $table ($keys) VALUES ('$values')
 		";
 		$st = db()->prepare($sql);
 		$st->execute();
+		print_r($st->errorInfo());	
 	}
 
 	public static function clear() {

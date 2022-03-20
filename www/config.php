@@ -7,8 +7,9 @@ spl_autoload_register(function ($class) {
 		include_once "model/".$class.".php";
 });
 
-$database = 'mysql:host=database:3306';
 $_db_name = $_ENV['MYSQL_DATABASE'];
+$_db_port = 3306;
+$database = "mysql:host=database:3306;dbname=$_db_name";
 $_db_login = $_ENV['MYSQL_USER'];
 $_db_pass = $_ENV['MYSQL_PASSWORD'];
 $_db_schema= "public";

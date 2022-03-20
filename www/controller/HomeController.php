@@ -22,7 +22,7 @@ class HomeController {
 	public function jsonp() {
 		include_once "csp/default.php";
 		include_once "view/header.php";
-		include_once "view/not_implemented.php";
+		include_once "view/jsonp.php";
 		include_once "view/footer.php";
 	}
 
